@@ -1,0 +1,9 @@
+{
+  "welcome": "Bienvenido a yardstick!",
+  "forgotPassword": "Clave Olvidada",
+  "deafult": {
+    "success": "La petición ha finalizado exitósamente.",
+    "error": "Ha ocurrido un error"
+  },
+  "greeting": "Hola {name}!"
+}

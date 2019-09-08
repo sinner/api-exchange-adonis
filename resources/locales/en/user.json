@@ -1,0 +1,7 @@
+{
+  "invalidData": "Some data is not valid.",
+  "emailNotFound": "No user with that email was found.",
+  "confirmationTokenNotFound": "No user with that confirmation token was found.",
+  "passwordResetRequestSuccess": "A link has been sent to your email, use it to reset your password.",
+  "passwordResetSuccess": "Password reset has been completed successfully."
+}

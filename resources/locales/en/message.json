@@ -1,0 +1,9 @@
+{
+  "welcome": "Welcome to yardstick!",
+  "forgotPassword": "Forgot Password",
+  "default": {
+    "success": "The request has finished successfuly.",
+    "error": "Has occurred an error"
+  },
+  "greeting": "Hello {name}!"
+}
