@@ -21,6 +21,7 @@ const providers = [
   '@adonisjs/mail/providers/MailProvider',
   '@adonisjs/auth/providers/AuthProvider',
   '@adonisjs/validator/providers/ValidatorProvider',
+  '@adonisjs/redis/providers/RedisProvider',
   'adonis-swagger/providers/SwaggerProvider',
 ];
 
@@ -34,7 +35,7 @@ const providers = [
 |
 */
 const aceProviders = [
-  '@adonisjs/lucid/providers/MigrationsProvider'
+  '@adonisjs/lucid/providers/MigrationsProvider',
 ];
 
 /*
@@ -87,6 +88,6 @@ module.exports = {
    | Or if user locale is not supported.
    |
    */
-   locale: 'en'
+   locale: 'en',
   },
 };
