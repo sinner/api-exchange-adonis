@@ -16,8 +16,11 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route');
 
-Route.get('/api/hello', 'TestController.hello');
 Route.post('/api/login', 'User/AuthController.login').middleware('guest');
 Route.post('/api/sign-up', 'User/AuthController.signUp').middleware('guest')
 Route.post('/api/password-reset-request', 'User/AuthController.passwordResetRequest').middleware('guest');
 Route.post('/api/password-reset/:confirmationToken', 'User/AuthController.passwordReset').middleware('guest');
+
+Route.get('/api/currencies', 'Currency/ExchangeController.getAllCurrencies');
+Route.get('/api/currency/:id', 'Currency/ExchangeController.findCurrencyById');
+Route.get('/api/exchange/:currencyFrom/:currencyTo/calculate', 'Currency/ExchangeController.exchageCalculate');

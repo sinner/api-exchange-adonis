@@ -13,7 +13,6 @@
 /** @type {import('@adonisjs/lucid/src/Factory')} */
 const Factory = use('Factory');
 const Database = use('Database');
-const Hash = use('Hash');
 
 class UserSeeder {
   async run () {
@@ -21,13 +20,15 @@ class UserSeeder {
     console.log(users);
     Factory.blueprint('App/Models/User', async (faker) => {
       return {
+        display_name: 'José Gabriel González',
         username: 'admin',
         email: 'jgabrielsinner@gmail.com',
-        password: await Hash.make('admin'),
+        password: 'admin',
+        birthday: '1987-10-04',
       }
     });
     const user = await Factory.model('App/Models/User').create();
-    console.log(user);
+    console.log('--- User created: ', user);
   }
 }
 
