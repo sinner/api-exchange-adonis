@@ -1,5 +1,8 @@
+'use strict';
+
 const { LogicalException } = require('@adonisjs/generic-exceptions');
 const code = '';
+const Env = use('Env');
 
 class CustomHttpException extends LogicalException {
   constructor (message, status, data) {
@@ -18,7 +21,6 @@ class CustomHttpException extends LogicalException {
    * @return {void}
    */
   async handle (error, { request, response }) {
-    const Env = use('Env');
 
     const defaultMessage = 'Error';
     const message = error.message || defaultMessage;
@@ -34,8 +36,6 @@ class CustomHttpException extends LogicalException {
       data: error.data,
       errorTrack: error.stack,
     });
-
-    return super.handle(...arguments);
   }
 }
 
