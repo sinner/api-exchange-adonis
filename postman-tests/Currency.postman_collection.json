@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "d2c7680b-2ea1-49f0-a3d6-3f57e5679680",
+		"name": "Currency",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Currencies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/currencies?exclude=3",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"currencies"
+					],
+					"query": [
+						{
+							"key": "exclude",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Currency",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/currency/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"currency",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate Currency Exchange",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/exchange/:currencyFrom/:currencyTo/calculate?value=500",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"exchange",
+						":currencyFrom",
+						":currencyTo",
+						"calculate"
+					],
+					"query": [
+						{
+							"key": "value",
+							"value": "500"
+						}
+					],
+					"variable": [
+						{
+							"key": "currencyFrom",
+							"value": "1"
+						},
+						{
+							"key": "currencyTo",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Default Exchange Currencies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/exchange/default-currencies/desc",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"exchange",
+						"default-currencies",
+						"desc"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

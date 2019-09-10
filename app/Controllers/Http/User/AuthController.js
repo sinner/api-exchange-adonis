@@ -119,7 +119,7 @@ class AuthController {
   *         example:
   *           message: User not found
   */
-  async resetPassword({auth, request, params response}) {
+  async resetPassword({auth, request, params, response}) {
     const newPassword = request.post('newPassword');
     const message = await this.userService.passwordReset(params.confirmationToken, newPassword);
     response.header('Response-Message', message);
