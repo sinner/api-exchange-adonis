@@ -26,3 +26,13 @@ After running the seed command you could login into the system using the followi
 user: jsinnerx@gmail.com
 pass: admin
 ```
+
+## Tests
+
+There's missing unit tests and functional tests (endpoints). If I had had more time I've could finish them. But, there is a directory (postman-tests) where you can see the tests I've made using Postman.
+
+https://adonisjs.com/docs/4.1/testing
+
+## Swagger
+
+You could get into this URL http://localhost:4000/docs and review the list of endpoints created.
