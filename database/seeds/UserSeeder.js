@@ -22,7 +22,7 @@ class UserSeeder {
       return {
         display_name: 'José Gabriel González',
         username: 'admin',
-        email: 'jgabrielsinner@gmail.com',
+        email: 'jsinnerx@gmail.com',
         password: 'admin',
         birthday: '1987-10-04',
       }

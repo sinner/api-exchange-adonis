@@ -6,6 +6,7 @@ const CustomHttpException = use('App/Exceptions/CustomHttpException');
 class ExchangeController {
 
   constructor() {
+    /** @type {import('../../../Services/CurrencyService')} */
     this.currencyService = new CurrencyService();
   }
 
@@ -35,7 +36,7 @@ class ExchangeController {
     );
   }
 
-  /**
+ /**
   * @swagger
   * "/api/currency/:id":
   *   get:
@@ -61,6 +62,28 @@ class ExchangeController {
   }
 
   /**
+  * @swagger
+  * "/api/exchange/default-currencies/:order?":
+  *   get:
+  *     tags:
+  *       - Get Default Currencies to Exchange
+  *     summary: Get Default Currencies to Exchange
+  *     responses:
+  *       200:
+  *         description: Default Currencies to Exchange
+  *         example:
+  *           message: Success
+  *       404:
+  *         description: Currencies Not Found
+  *         example:
+  *           message: Not Found
+  */
+  getDefaultExchageCurrencies ({auth, request, params, response}) {
+    const order = params.order || 'asc';
+    return this.currencyService.getDefaultExchageCurrencies(order);
+  }
+
+ /**
   * @swagger
   * "/api/exchange/:currencyFrom/:currencyTo/calculate":
   *   get:

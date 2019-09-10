@@ -23,4 +23,5 @@ Route.post('/api/password-reset/:confirmationToken', 'User/AuthController.passwo
 
 Route.get('/api/currencies', 'Currency/ExchangeController.getAllCurrencies');
 Route.get('/api/currency/:id', 'Currency/ExchangeController.findCurrencyById');
+Route.get('/api/exchange/default-currencies/:order?', 'Currency/ExchangeController.getDefaultExchageCurrencies')
 Route.get('/api/exchange/:currencyFrom/:currencyTo/calculate', 'Currency/ExchangeController.exchageCalculate');

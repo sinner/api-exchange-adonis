@@ -28,6 +28,7 @@
     "@adonisjs/mail": "^3.0.9",
     "@adonisjs/redis": "^2.0.7",
     "@adonisjs/validator": "^5.0.6",
+    "adonis-cli": "^2.1.9",
     "adonis-swagger": "^1.2.9",
     "is_js": "^0.9.0",
     "md5": "^2.2.1",

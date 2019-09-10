@@ -1,4 +1,4 @@
-# Adonis API application
+# Adonis API Test application
 
 This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
 
@@ -13,16 +13,16 @@ This is the boilerplate for creating an API server in AdonisJs, it comes pre-con
 Use the adonis command to install the blueprint
 
 ```bash
-adonis new yardstick --api-only
+npm install
+npx adonis migration:run
+npx adonis seed
 ```
 
-or manually clone the repo and then run `npm install`.
+## User
 
+After running the seed command you could login into the system using the following credentials
 
-### Migrations
-
-Run the following command to run startup migrations.
-
-```js
-adonis migration:run
+```bash
+user: jsinnerx@gmail.com
+pass: admin
 ```

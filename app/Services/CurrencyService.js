@@ -91,6 +91,25 @@ class CurrencyService {
     return exchangeObj;
   }
 
+  async getDefaultExchageCurrencies (order) {
+    let currencyFrom = null;
+    let currencyTo = null;
+
+    if (order === 'asc') {
+      currencyFrom = await Currency.findBy('iso_code', 'USD');
+      currencyTo = await Currency.findBy('iso_code', 'EUR');
+    }
+    else {
+      currencyFrom = await Currency.findBy('iso_code', 'EUR');
+      currencyTo = await Currency.findBy('iso_code', 'USD');
+    }
+
+    return {
+      currencyFrom,
+      currencyTo,
+    };
+  }
+
   /**
    * Calculate a currency exchange
    * 
