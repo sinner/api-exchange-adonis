@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "37dc79e0-dd89-4604-800e-f80f50c16cc2",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"jgabrielsinner@gmail.com\",\n\t\"password\": \"admin\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"display_name\": \"José Gabriel\",\n\t\"email\": \"jgabrielsinner@gmail.com\",\n\t\"username\": \"jsinner\",\n\t\"password\": \"admin123\",\n\t\"birthday\": \"1987-10-04\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/sign-up",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
