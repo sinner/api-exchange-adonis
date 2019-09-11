@@ -53,8 +53,8 @@ class ExchangeController {
   *         example:
   *           message: Not Found
   */
-  findCurrencyById ({auth, request, params, response}) {
-    const currency = this.currencyService.findCurrencyById(params.id);
+  async findCurrencyById ({auth, request, params, response}) {
+    const currency = await this.currencyService.findCurrencyById(params.id);
     if (!currency) {
       throw new CustomHttpException('Currency Not Found!', 404, { id: params.id });
     }
@@ -106,7 +106,7 @@ class ExchangeController {
   *         example:
   *           message: Not Found
   */
-  exchageCalculate ({auth, request, params, response}) {
+  async exchageCalculate ({auth, request, params, response}) {
     let currencyFromId = params.currencyFrom;
     if (currencyFromId) {
       currencyFromId = parseInt(currencyFromId);
@@ -122,7 +122,7 @@ class ExchangeController {
     else {
       value = parseFloat(value);
     }
-    return this.currencyService.exchangeCalculate(currencyFromId, currencyToId, value);
+    return await this.currencyService.exchangeCalculate(currencyFromId, currencyToId, value);
   }
 
 }
