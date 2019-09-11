@@ -19,6 +19,7 @@ npm install
 npx adonis migration:run
 npx adonis seed
 ```
+
 ## Run Server
 
 To run the server in development env run the following
